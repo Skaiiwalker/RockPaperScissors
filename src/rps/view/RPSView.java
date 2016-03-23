@@ -8,7 +8,7 @@ public class RPSView
 	
 	public RPSView()
 	{
-		windowMessage = ("The score is User: " + " and Computer: ");  //make this display the score.
+		windowMessage = ("Let's play Rock Paper Scissors!");
 	}
 	
 	public String grabInput(String displayText)
