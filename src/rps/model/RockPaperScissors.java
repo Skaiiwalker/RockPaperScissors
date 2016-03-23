@@ -7,7 +7,6 @@ public class RockPaperScissors
 {
 	private RPSController baseController;
 	private RPSView baseView;
-	private String userInput;
 	private String computerInput;
 	private int computerChoose;
 	
@@ -16,7 +15,6 @@ public class RockPaperScissors
 		RPSController baseController = new RPSController();
 		RPSView baseView = new RPSView();
 		
-		userInput = baseView.collectUserText("Type rock, paper, or scissors in all lowercase.");
 		computerInput = ("");
 	}
 	
@@ -41,6 +39,9 @@ public class RockPaperScissors
 	
 	public void playRockPaperScissors()
 	{
+		String userInput;
+		userInput = baseView.collectUserText("Type rock, paper, or scissors in all lowercase.");
+		
 		if(userInput == "rock")
 		{
 			if(computerInput == "rock")
@@ -98,6 +99,5 @@ public class RockPaperScissors
 				playRockPaperScissors();
 			}
 		}
-		baseController.checkWinner();
 	}
 }

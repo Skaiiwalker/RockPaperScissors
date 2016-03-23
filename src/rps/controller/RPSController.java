@@ -6,6 +6,7 @@ import rps.view.RPSView;
 public class RPSController 
 {
 	private RockPaperScissors RPSGame;
+	private RPSView baseView;
 	
 	public int userScore;
 	public int computerScore;
@@ -13,6 +14,7 @@ public class RPSController
 	public RPSController()
 	{
 		RockPaperScissors RPSGame = new RockPaperScissors();
+		RPSView baseView = new RPSView();
 		
 		userScore = (0);
 		computerScore = (0);
@@ -20,27 +22,35 @@ public class RPSController
 	
 	public void start()
 	{
-		
+		RPSGame.playRockPaperScissors();
 	}
 	
 	public void userWinRound()
 	{
-		
+		userScore++;
+		checkWinner();
 	}
 	
 	public void computerWinRound()
 	{
-		
+		computerScore++;
+		checkWinner();
 	}
 	
 	public void userWin()
 	{
-		
+		baseView.displayText("User win!");
+		userScore = 0;
+		computerScore = 0;
+		start();
 	}
 	
 	public void computerWin()
 	{
-		
+		baseView.displayText("Computer wins!");
+		userScore = 0;
+		computerScore = 0;
+		start();
 	}
 	
 	public void gameTie()
