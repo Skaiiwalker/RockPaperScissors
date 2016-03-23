@@ -55,7 +55,7 @@ public class RPSController
 	
 	public void gameTie()
 	{
-		
+		RPSGame.playRockPaperScissors();
 	}
 	
 	public void checkWinner()
