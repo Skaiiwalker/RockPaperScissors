@@ -12,8 +12,7 @@ public class RockPaperScissors
 	
 	public RockPaperScissors()
 	{
-		RPSController baseController = new RPSController();
-		RPSView baseView = new RPSView();
+		baseController = new RPSController();
 		
 		computerInput = ("");
 	}

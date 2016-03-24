@@ -13,7 +13,7 @@ public class RPSController
 	
 	public RPSController()
 	{
-		RockPaperScissors RPSGame = new RockPaperScissors();
+		RPSGame = new RockPaperScissors();
 		RPSView baseView = new RPSView();
 		
 		userScore = (0);
@@ -72,5 +72,15 @@ public class RPSController
 		{
 			RPSGame.playRockPaperScissors();
 		}
+	}
+	
+	public RockPaperScissors getRockPaperScissors()
+	{
+		return RPSGame;
+	}
+	
+	public RPSView getRPSView()
+	{
+		return baseView;
 	}
 }
